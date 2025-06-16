@@ -7,28 +7,25 @@
 
 In this step, we map each room individually using SLAM so the robot can later navigate through them independently. We're using TurtleBot3 in the Gazebo house environment and the GMapping SLAM method.
 
-1. Launch the Gazebo Simulation Environment
+#### 1. Launch the Gazebo Simulation Environment
 roslaunch turtlebot3_gazebo turtlebot3_house.launch
 
 - This launches the simulated house environment with the TurtleBot3 robot.
 - The house consists of multiple rooms where each one will be mapped separately.
 
-2. Start the SLAM Node (GMapping)
+#### 2. Start the SLAM Node (GMapping)
 
 roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=gmapping
 
 - This runs the SLAM algorithm (gmapping) to build a map in real time as the robot moves.
 - Make sure slam_methods:=gmapping is specified to use GMapping over Cartographer or others.
 
-3. Control the Robot Manually
-
+#### 3. Control the Robot Manually
 roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
-
 - This launches the teleoperation node that lets you control the robot using your keyboard.
-
-
 - Use this to move the robot around only one room at a time, thoroughly covering the area.
-4. Save the Map
+
+#### 4. Save the Map
 
 rosrun map_server map_saver -f /home/adi/catkin_ws/src/maps/room1
 
@@ -50,7 +47,7 @@ These wormholes allow you to:
 - Store fixed entry/exit points between rooms
 - Later switch maps and re-localize the robot at a specific position
 
-1. Launch Navigation in One Map
+#### 1. Launch Navigation in One Map
 
 roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=/home/adi/catkin_ws/src/multi_map_navigation/maps/room1.yaml
 This will:
@@ -58,14 +55,14 @@ This will:
   - Start AMCL (Adaptive Monte Carlo Localization)
   - Let the robot localize and navigate within room1
 
-2. Use 2D Pose Estimate Tool in RViz
+#### 2. Use 2D Pose Estimate Tool in RViz
 In RViz, select the "2D Pose Estimate" tool from the top menu.
 Click on the point where you want the wormhole to exist in this map (e.g., a doorway).
 When you do this:
 - The robot will update its estimated pose
 - You’ll see a green arrow (indicating the pose)
 
-3. Check the Pose on /amcl_pose Topic
+#### 3. Check the Pose on /amcl_pose Topic
 rostopic echo /amcl_pose
 
 ```
@@ -136,10 +133,10 @@ INSERT INTO wormholes VALUES ('room3', 'room2', 6.10, -0.18);
 ### 2.4 View All Entries (Verify)
 
 To confirm entries are added:
-SELECT * FROM wormholes;
+```SELECT * FROM wormholes;```
 
 ### 2.5 Exit SQLite
-.quit
+```.quit```
 
 ## Step 3: C++ Code Implementation
 
