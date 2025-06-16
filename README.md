@@ -284,12 +284,12 @@ Using Python Action Client:
 
 <div style="text-align: center;">
     <a href="https://youtu.be/QrFsZ149RVE">
-      <img src="multi_map_navigation/output.png" alt="demo moving from room1 to room2" width="800" height="450">
+      <img src="multi_map_navigation/output.png" alt="demo moving robot from room1 to room2" width="800" height="450">
      </a>     
 </div>
 
 <div style="text-align: center;">
     <a href="https://youtu.be/hmXQpPh57WE">
-      <img src="multi_map_navigation/r2_to_r1.png" alt="demo moving from room2 to room1" width="800" height="450">
+      <img src="multi_map_navigation/r2_to_r1.png" alt="demo moving robot from room2 to room1" width="800" height="450">
      </a>     
 </div>
