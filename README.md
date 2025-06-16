@@ -279,3 +279,11 @@ Using Python Action Client:
       result = send_goal()
       print("Result:", result.success, result.message)
   ```
+
+### 🎥 Demo
+
+<div style="text-align: center;">
+    <a href="https://youtu.be/QrFsZ149RVE">
+      <img src="multi_map_navigation/output.png" alt="Watch the demo on YouTube" width="800" height="450">
+     </a>     
+</div>
