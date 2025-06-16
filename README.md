@@ -8,20 +8,25 @@
 In this step, we map each room individually using SLAM so the robot can later navigate through them independently. We're using TurtleBot3 in the Gazebo house environment and the GMapping SLAM method.
 
 #### 1. Launch the Gazebo Simulation Environment
+```sh
 roslaunch turtlebot3_gazebo turtlebot3_house.launch
+```
 
 - This launches the simulated house environment with the TurtleBot3 robot.
 - The house consists of multiple rooms where each one will be mapped separately.
 
 #### 2. Start the SLAM Node (GMapping)
-
-roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=gmapping
+```sh
+roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=gmapping 
+```
 
 - This runs the SLAM algorithm (gmapping) to build a map in real time as the robot moves.
 - Make sure slam_methods:=gmapping is specified to use GMapping over Cartographer or others.
 
 #### 3. Control the Robot Manually
+```sh
 roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
+```
 - This launches the teleoperation node that lets you control the robot using your keyboard.
 - Use this to move the robot around only one room at a time, thoroughly covering the area.
 
@@ -225,13 +230,23 @@ catkin_make
 source devel/setup.bash
 ```
 
-#### 3. Launch the navigation server:
-
+#### 3.Launch the Gazebo Simulation Environment 
+```sh
+roslaunch turtlebot3_gazebo turtlebot3_house.launch
 ```
+
+#### 4.Launching TurtleBot3 Navigation
+```sh
+roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=/home/adi/tb3_house_map.yaml
+```
+
+#### 5. Launch the navigation server:
+
+```sh
 roslaunch multi_map_navigation multi_map_navigation.launch
 ```
 
-#### 4. Send a navigation goal: You can send a goal using an action client, or use a custom script like:
+#### 6. Send a navigation goal: You can send a goal using an action client, or use a custom script like:
 
 You can send navigation goals using the ROS action client or directly with rostopic:
 ```sh
