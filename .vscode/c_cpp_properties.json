@@ -1,0 +1,36 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/adi/catkin_ws/devel/include/**",
+        "/home/adi/catkin_ws1/devel/include/**",
+        "/home/adi/ros_arduino_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/adi/ros_arduino_ws/src/eigen_checks/include/**",
+        "/home/adi/catkin_ws1/src/graph_search/include/**",
+        "/home/adi/ros_arduino_ws/src/imu_to_odom/include/**",
+        "/home/adi/ros_arduino_ws/src/minkindr/minkindr/include/**",
+        "/home/adi/ros_arduino_ws/src/minkindr_conversions/include/**",
+        "/home/adi/catkin_ws1/src/Multi-Map-Navigation/multi_map_nav/include/**",
+        "/home/adi/catkin_ws/src/multi_map_navigation/include/**",
+        "/home/adi/ros_arduino_ws/src/numpy_eigen/include/**",
+        "/home/adi/catkin_ws1/src/planner/include/**",
+        "/home/adi/ros_arduino_ws/src/ros_package/include/**",
+        "/home/adi/catkin_ws/src/turtlebot3_simulations/turtlebot3_fake/include/**",
+        "/home/adi/catkin_ws/src/turtlebot3_simulations/turtlebot3_gazebo/include/**",
+        "/home/adi/catkin_ws/src/turtlebot3/turtlebot3_slam/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
