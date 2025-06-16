@@ -284,6 +284,6 @@ Using Python Action Client:
 
 <div style="text-align: center;">
     <a href="https://youtu.be/QrFsZ149RVE">
-      <img src="multi_map_navigation/output.png" alt="Watch the demo on YouTube" width="800" height="450">
+      <img src="multi_map_navigation/output.png" alt="demo moving from room1 to room2" width="800" height="450">
      </a>     
 </div>
